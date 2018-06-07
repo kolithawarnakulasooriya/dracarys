@@ -1,5 +1,5 @@
-﻿from imagepreprocessor  import ImagePreProcessor
-from areapredictor import AreaPredictor
+﻿from dracarys.dracarysmiddleware.imagepreprocessor  import ImagePreProcessor
+from dracarys.dracarysmiddleware.areapredictor import AreaPredictor
 import numpy as np
 import sys
 

@@ -1,5 +1,5 @@
 ﻿import numpy as np
-import AreaSlize
+from dracarys.dracarysmiddleware.areapredictor.AreaSlize import AreaSlize
 
 class AreaPredictor(object):
     """
@@ -42,7 +42,7 @@ class AreaPredictor(object):
             if(i%n==0 and i != 0):  # what is the row which should slize 
 
                 vals = [val for _,val in enumerate(source[i])]  # get the list of Intensity Values for each row
-                slize = AreaSlize.AreaSlize(vals,i)             # make Slice object
+                slize = AreaSlize(vals,i)             # make Slice object
                 areaSlizes.append(slize)
             if endY != -1 and i == endY:    # return if the i th row equals to end row,
                 break 
@@ -71,7 +71,7 @@ class AreaPredictor(object):
             # find the mean slice
 
             meanSlicePoints = self.getMeanSlicePoints(meanSlizes) 
-            meanSlize = AreaSlize.AreaSlize(meanSlicePoints,-1)     # create the mean slice using mean intensity points
+            meanSlize = AreaSlize(meanSlicePoints,-1)     # create the mean slice using mean intensity points
 
             # get the set of avarage errors with compared to mean slice.
 

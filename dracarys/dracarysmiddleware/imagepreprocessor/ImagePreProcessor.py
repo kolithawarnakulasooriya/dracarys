@@ -1,11 +1,11 @@
-﻿import ColorImageEnhancer, ColorImageEnhancer
+﻿from dracarys.dracarysmiddleware.imagepreprocessor.ColorImageEnhancer import ColorImageEnhancer
 import numpy as np
 import cv2
 
 
 GAUSSIAN_SMOOTH_FILTER_SIZE = (5,5)
 
-class ImagePreProcessor(ColorImageEnhancer.ColorImageEnhancer):
+class ImagePreProcessor(ColorImageEnhancer):
     """
         Pre process the image befor execution
 
@@ -14,7 +14,7 @@ class ImagePreProcessor(ColorImageEnhancer.ColorImageEnhancer):
     def __init__(self, sourceImage):
         
         self.imgSource = sourceImage
-        super(ColorImageEnhancer.ColorImageEnhancer, self).__init__()
+        super(ColorImageEnhancer, self).__init__()
 #   =======================================================================
 
 
